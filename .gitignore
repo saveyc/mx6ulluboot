@@ -5,36 +5,36 @@
 #
 # Normal rules
 #
-.*
-*.o
-*.o.*
-*.a
-*.s
-*.su
-*.mod.c
-*.i
-*.lst
-*.order
-*.elf
-*.swp
-*.bin
-*.patch
-*.cfgtmp
+#.*
+#*.o
+#*.o.*
+#*.a
+#*.s
+#*.su
+#*.mod.c
+#*.i
+#*.lst
+#*.order
+#*.elf
+#*.swp
+#*.bin
+#*.patch
+#*.cfgtmp
 
 # host programs on Cygwin
-*.exe
+#*.exe
 
 # Build tree
-/build-*
+#/build-*
 
 #
 # Top-level generic files
 #
 /MLO*
 /SPL
-/System.map
-/u-boot*
-/boards.cfg
+#/System.map
+#/u-boot*
+#/boards.cfg
 
 #
 # git files that we don't want to ignore even it they are dot-files

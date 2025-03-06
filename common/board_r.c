@@ -77,6 +77,8 @@ DECLARE_GLOBAL_DATA_PTR;
 extern int prom_init(void);
 #endif
 
+extern int imx6_light_up_led2 (void);
+
 ulong monitor_flash_len;
 
 __weak int board_flash_wp_on(void)
@@ -985,6 +987,10 @@ init_fnc_t init_sequence_r[] = {
 #ifdef CONFIG_FSL_FASTBOOT
 	initr_check_fastboot,
 #endif
+
+	/* Light up LED2 */
+        imx6_light_up_led2,
+
 	run_main_loop,
 };
 

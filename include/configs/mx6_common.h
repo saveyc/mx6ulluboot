@@ -8,6 +8,23 @@
 #ifndef __MX6_COMMON_H
 #define __MX6_COMMON_H
 
+/* LED1 & LED2 configuration  */
+#define CONFIG_LED1_IOMUXC   MX6_PAD_GPIO1_IO03__GPIO1_IO03
+#define CONFIG_LED2_IOMUXC   MX6_PAD_GPIO1_IO04__GPIO1_IO04
+#define CONFIG_LED1          IMX_GPIO_NR(1, 3)
+#define CONFIG_LED2          IMX_GPIO_NR(1, 4)
+
+/* ALIENTEK DISPLAY configuration number */
+#define CONFIG_ATKVGA_DISPLAY			7
+#define CONFIG_ATKHDMI_DISPLAY                  6
+#define CONFIG_ATKLCD_10_1_1280x800           	5
+#define CONFIG_ATKLCD_7_1024x600           	2
+#define CONFIG_ATKLCD_7_800x480            	4
+#define CONFIG_ATKLCD_4_3_800x480		1
+#define CONFIG_ATKLCD_4_3_480x272            	0
+
+#define CONFIG_FAT_WRITE
+
 #ifndef CONFIG_MX6UL
 #define CONFIG_ARM_ERRATA_743622
 #if (defined(CONFIG_MX6QP) || defined(CONFIG_MX6Q) ||\
@@ -77,7 +94,7 @@ defined(CONFIG_MX6DL)) && !defined(CONFIG_MX6SOLO)
 #define CONFIG_SYS_LOAD_ADDR	CONFIG_LOADADDR
 
 #ifndef CONFIG_BOOTDELAY
-#define CONFIG_BOOTDELAY	3
+#define CONFIG_BOOTDELAY	1
 #endif
 
 /* allow to overwrite serial and ethaddr */
